@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}Game{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+{% endblock %}
+
+{% block content %}
+    <button id="modeTogglerButton" class="button">Row</button>
+    <div class="gridWrapper">
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %} 
