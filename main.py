@@ -14,6 +14,10 @@ def game():
 def settings():
     if request.method == 'GET':
         return render_template('settings.html')
+    
+    width, height = request.form['width'], request.form['height']
+    print(width, height)
+    return redirect(url_for('game'))
 
 
 if __name__ == '__main__':
