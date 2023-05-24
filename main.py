@@ -20,5 +20,10 @@ def settings():
     return redirect(url_for('game'))
 
 
+@app.route('/subsets')
+def subsets():
+    return render_template('subsets.html')
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81, debug=True)

@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}Subsets Game{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/subsets.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1 id="number">0</h1>
+    <div class="gridWrapper">
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/subsets.js') }}"></script>
+{% endblock %} 
