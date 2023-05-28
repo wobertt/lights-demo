@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <a href="{{ url_for('game') }}">
+        <button class="button">Grid Game</button>
+    </a>
+    <a href="{{ url_for('subsets') }}">
+        <button class="button">Subsets Game</button>
+    </a>
+{% endblock %}
